@@ -1,0 +1,6 @@
+def format_number(value,prefix =''):
+    for unit in ['','mil']:
+        if value < 1000:
+            return f'{prefix}{value:.2f} {unit}'  #prefix é o que eu recebi lá de app.py 'R$' e value:2f é para após a casa decimal só ter dois números
+        value /= 1000
+    return f'{prefix}{value:.2f} milhões'
